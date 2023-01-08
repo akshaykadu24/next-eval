@@ -55,11 +55,11 @@ export default function Home({data}) {
               </div>
 
           </div>
-          <div>
-    <h1>Projects</h1>
-                <div style={{display:'grid',gridTemplateColumns:'180px 180px 180px 180px'}}>
-                  {
-                    repo.items.map((el)=>{
+{/* project part */} 
+          <div>           
+        <h1>Projects</h1>
+                <div style={{display:'grid',gridTemplateColumns:'173px 173px 173px 173px',gap:"20px"}}>
+                {   repo.items.map((el)=>{
                       return(
                         <div key={el.name} >
                           <Link href={el.html_url}><h2>{el.name}</h2></Link>
@@ -68,18 +68,13 @@ export default function Home({data}) {
                           </div>
                           <p>{el.language}</p>
                           <p>{el.watchers_count}</p>
-                          <p>following: {data.following}</p>
-
-                          
+                          <p>following: {el.stargazers_count}</p>
                         </div>
-                      )
-                    })
-                  }
+                      )})
+                  }   
                 </div>
           </div>
-          
         </div>
-      
       </main>
     </>
   )

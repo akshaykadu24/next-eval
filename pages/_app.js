@@ -1,10 +1,10 @@
+import Navbar from '../components/navbar'
 import '../styles/globals.css'
-import Profile from '../components/profile'
 
 export default function App({ Component, pageProps }) {
   return (
     <div>
-      {/* <Profile/> */}
+      <Navbar/>
       <Component {...pageProps} />
     </div>
   )
