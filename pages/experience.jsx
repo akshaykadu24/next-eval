@@ -19,7 +19,7 @@ const Experience = ({prof}) => {
 }
 
 export async function getServerSideProps(){
-    let res = await axios.get("http://localhost:8080/a") 
+    let res = await axios.get("https://api.github.com/users/riteshf") 
     // let data =  await res.json()
     console.log(res.data)
     return{
